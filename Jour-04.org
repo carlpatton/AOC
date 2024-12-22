@@ -1,0 +1,72 @@
+--- Jour 4 : Recherche de Cérès ---
+"On dirait que le chef n'est pas là. Au suivant !" L'un des historiens sort un appareil et appuie sur le seul bouton qui s'y trouve. Après un bref flash, vous reconnaissez l'intérieur de la station de surveillance de Cérès !
+
+Alors que la recherche du chef continue, une petite elfe qui vit dans la station tire sur votre chemise ; elle aimerait savoir si vous pourriez l'aider avec sa recherche de mots (votre saisie de puzzle). Elle n'a qu'à trouver un mot : XMAS.
+
+Cette recherche de mots permet aux mots d'être horizontaux, verticaux, diagonaux, écrits à l'envers ou même superposés à d'autres mots. C'est un peu inhabituel, cependant, car vous n'avez pas seulement besoin de trouver une instance de XMAS, vous devez les trouver toutes . Voici quelques exemples XMASqui peuvent apparaître, où des caractères non pertinents ont été remplacés par .:
+
+
+..X...
+.SAMX.
+.A..A.
+XMAS.S
+.X....
+La recherche de mots réelle sera remplie de lettres. Par exemple :
+
+MMMSXXMASM
+MSAMXMSMSA
+AMXSXMAAMM
+MSAMASMSMX
+XMASAMXAMM
+XXAMMXXAMA
+SMSMSASXSS
+SAXAMASAAA
+MAMMMXMMMM
+MXMXAXMASX
+Dans cette recherche de mots, XMASapparaît un total de 18fois ; voici à nouveau la même recherche de mots, mais où les lettres non impliquées dans aucune XMASont été remplacées par .:
+
+....XXMAS.
+.SAMXMS...
+...S..A...
+..A.A.MS.X
+XMASAMX.MM
+X.....XA.A
+S.S.S.S.SS
+.A.A.A.A.A
+..M.M.M.MM
+.X.X.XMASX
+Jetez un œil au mot caché du petit lutin. Combien de fois XMASapparaît-il ?
+
+Votre réponse à l'énigme était 2599.
+
+
+
+--- Deuxième partie ---
+L'elfe vous regarde d'un air interrogateur. Avez-vous mal compris la mission ?
+
+En cherchant les instructions, vous retournez la recherche de mots pour découvrir qu'il ne s'agit pas en fait d'un XMASpuzzle ; c'est un X-MASpuzzle dans lequel vous êtes censé trouver deux mots MASen forme de X. Une façon d'y parvenir est la suivante :
+
+M.S
+.A.
+M.S
+Les caractères non pertinents ont été remplacés par .dans le diagramme ci-dessus. Dans le X, chacun MASpeut être écrit vers l'avant ou vers l'arrière.
+
+Voici le même exemple que précédemment, mais cette fois, tous les X-MASes ont été conservés :
+
+.M.S......
+..A..MSMS.
+.M.S.MAA..
+..A.ASMSM.
+.M.S.M....
+..........
+S.S.S.S.S.
+.A.A.A.A..
+M.M.M.M.M.
+..........
+Dans cet exemple, un X-MASapparaît 9fois.
+
+Retournez la recherche de mots des instructions sur le côté recherche de mots et réessayez. Combien de fois un X-MASapparaît-il ?
+
+Votre réponse à l'énigme était 1948.
+
+Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
