@@ -1,4 +1,6 @@
 * Jour 13 : L'engin à griffes 
+
+* Partie 1
 Ensuite, le hall d'un complexe hôtelier sur une île tropicale. Les historiens prennent un moment pour admirer le carrelage hexagonal du sol avant de se disperser.
 
 Heureusement, il semblerait que la station dispose d'une nouvelle salle d'arcade ! Peut-être pourrez-vous gagner des prix grâce aux machines à pinces ?
@@ -10,7 +12,7 @@ Avec un peu d'expérimentation, vous découvrez que les boutons de chaque machin
 Chaque machine contient un prix ; pour gagner le prix, la griffe doit être positionnée exactement au-dessus du prix sur les deux axes Xet Y.
 
 Vous vous demandez : quel est le plus petit nombre de jetons que vous devriez dépenser pour gagner le plus de prix possible ? Vous établissez une liste du comportement des boutons de chaque machine et de l'emplacement des prix (votre entrée de puzzle). Par exemple :
-
+#+begin_example
 Button A: X+94, Y+34
 Button B: X+22, Y+67
 Prize: X=8400, Y=5400
@@ -26,6 +28,7 @@ Prize: X=7870, Y=6450
 Button A: X+69, Y+23
 Button B: X+27, Y+71
 Prize: X=18641, Y=10279
+#+end_example
 Cette liste décrit la configuration des boutons et l'emplacement des prix de quatre machines à griffes différentes.
 
 Pour l'instant, considérons simplement la première machine à griffes de la liste :
@@ -50,11 +53,12 @@ Déterminez comment gagner autant de prix que possible. Quel est le nombre minim
 
 
 
---- Deuxième partie ---
+* Partie 2
+
 Alors que vous êtes sur le point de remporter le premier prix, vous découvrez que la griffe est loin d'être là où vous l'espériez. En raison d'une erreur de conversion d'unité dans vos mesures, la position de chaque prix est en fait 10000000000000plus haute sur les axes 1 Xet Y2 !
 
 Ajoutez 10000000000000à la position Xet Yde chaque prix. Après avoir effectué cette modification, l'exemple ci-dessus ressemblerait désormais à ceci :
-
+#+begin_example
 Button A: X+94, Y+34
 Button B: X+22, Y+67
 Prize: X=10000000008400, Y=10000000005400
@@ -70,6 +74,7 @@ Prize: X=10000000007870, Y=10000000006450
 Button A: X+69, Y+23
 Button B: X+27, Y+71
 Prize: X=10000000018641, Y=10000000010279
+#+end_example
 Désormais, il n'est possible de gagner un prix que sur les machines à 2 et 4 griffes. Malheureusement, il faudra bien plus que 100quelques clics pour y parvenir.
 
 En utilisant les coordonnées de prix corrigées, déterminez comment gagner autant de prix que possible. Quel est le nombre minimum de jetons que vous devriez dépenser pour gagner tous les prix possibles ?
