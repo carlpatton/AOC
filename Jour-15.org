@@ -1,4 +1,6 @@
 * Jour 15 : Les malheurs de l'entrepôt 
+
+* Partie 1
 Vous réapparaissez dans votre propre mini sous-marin ! Chaque historien conduit son mini sous-marin dans une direction différente ; peut-être que le chef a aussi son propre sous-marin ici quelque part ?
 
 Vous levez les yeux et voyez un vaste banc de poissons-lanternes nager à côté de vous. En les regardant de plus près, ils semblent assez anxieux, alors vous conduisez votre mini-sous-marin pour voir si vous pouvez les aider.
@@ -12,7 +14,7 @@ Pour l'instant, aucun des poissons-lanternes n'est assez courageux pour nager ju
 Les poissons-lanternes ont déjà une carte de l'entrepôt et une liste des mouvements que le robot tentera d' effectuer (votre saisie de puzzle). Le problème est que les mouvements échoueront parfois lorsque les boîtes seront déplacées, ce qui rend les mouvements réels du robot difficiles à prévoir.
 
 Par exemple:
-
+#+begin_example
 ##########
 #..O..O.O#
 #......O.#
@@ -34,12 +36,13 @@ vvv<<^>^v^^><<>>><>^<<><^vv^^<>vvv<>><^^v>^>vv<>v<<<<v<^v>^<^^>>>^<v<v
 <><^^>^^^<><vvvvv^v<v<<>^v<v>v<<^><<><<><<<^^<<<^<<>><<><^^^>^^<>^>v<>
 ^^>vv<^v^v<vv>^<><v<^v>^^^>>>^^vvv^>vvv<>>>^<^>>>>>^<<^v>^vvv<>^<><<v>
 v^^>>><<^^<>>^v^<v^vv<>v^<<>^<^v^v><^<<<><<^<v><v<>vv>>v><v^<vv<>v^<<^
+#+end_example
 Lorsque le robot ( @) tente de se déplacer, s'il y a des boîtes ( O) sur son chemin, le robot tentera également de pousser ces boîtes. Cependant, si cette action devait entraîner le déplacement du robot ou d'une boîte contre un mur ( #), rien ne bouge à la place, y compris le robot. Les positions initiales de ces boîtes sont indiquées sur la carte en haut du document que le poisson-lanterne vous a donné.
 
 Le reste du document décrit les mouvements ( ^vers le haut, vvers le bas, <vers la gauche, >vers la droite) que le robot va tenter d'effectuer, dans l'ordre. (Les mouvements forment une seule séquence géante ; ils sont divisés en plusieurs lignes pour faciliter le copier-coller. Les sauts de ligne dans la séquence de mouvements doivent être ignorés.)
 
 Voici un petit exemple pour commencer :
-
+#+begin_example
 ########
 #..O.O.#
 ##@.O..#
@@ -50,8 +53,9 @@ Voici un petit exemple pour commencer :
 ########
 
 <^^>>>vv<v>>v<<
+#+end_example
 Si le robot tentait la séquence de mouvements donnée, il pousserait les boîtes comme suit :
-
+#+begin_example
 Initial state:
 ########
 #..O.O.#
@@ -211,8 +215,9 @@ Move <:
 #...O..#
 #...O..#
 ########
+#+end_example
 L'exemple le plus grand comporte beaucoup plus de mouvements ; une fois que le robot a terminé ces mouvements, l'entrepôt ressemblerait à ceci :
-
+#+begin_example
 ##########
 #.O.O.OOO#
 #........#
@@ -223,13 +228,15 @@ L'exemple le plus grand comporte beaucoup plus de mouvements ; une fois que le r
 #O.....OO#
 #OO....OO#
 ##########
+#+end_example
 Les poissons-lanternes utilisent leur propre système de positionnement des marchandises (GPS) pour suivre l'emplacement des boîtes. Les coordonnées GPS d'une boîte sont égales à 100 fois sa distance par rapport au bord supérieur de la carte plus sa distance par rapport au bord gauche de la carte. (Ce processus ne s'arrête pas aux carreaux muraux ; mesurez jusqu'aux bords de la carte.)
 
 Ainsi, la case illustrée ci-dessous a une distance de 1du bord supérieur de la carte et 4du bord gauche de la carte, ce qui donne une coordonnée GPS de 100 * 1 + 4 = 104.
-
+#+begin_example
 #######
 #...O..
 #......
+#+end_example
 Le poisson-lanterne voudrait connaître la somme des coordonnées GPS de toutes les boîtes une fois que le robot aura fini de se déplacer. Dans le grand exemple, la somme des coordonnées GPS de toutes les boîtes est 10092. Dans le petit exemple, la somme est 2028.
 
 Prévoyez le mouvement du robot et des cartons dans l'entrepôt. Une fois que le robot a fini de se déplacer, quelle est la somme des coordonnées GPS de tous les cartons ?
@@ -237,8 +244,7 @@ Prévoyez le mouvement du robot et des cartons dans l'entrepôt. Une fois que le
 ** Votre réponse à l'énigme était 1509863.
 
 
-
---- Deuxième partie ---
+* Partie 2
 Les poissons-lanternes utilisent vos informations pour trouver un moment sûr pour nager et éteindre le robot défectueux ! Au moment où ils commencent à préparer un festival en votre honneur, des rapports commencent à arriver indiquant que le robot d'un deuxième entrepôt fonctionne également mal.
 
 L'agencement de cet entrepôt est étonnamment similaire à celui que vous venez d'aider. Il y a une différence essentielle : tout, sauf le robot, est deux fois plus large ! La liste des mouvements du robot ne change pas.
@@ -252,7 +258,7 @@ Si la tuile est @, la nouvelle carte contient @.à la place.
 Cela produira une nouvelle carte d'entrepôt qui sera deux fois plus large et avec des cases larges représentées par []. (Le robot ne change pas de taille.)
 
 L'exemple plus grand d'avant ressemblerait maintenant à ceci :
-
+#+begin_example
 ####################
 ##....[]....[]..[]##
 ##............[]..##
@@ -263,8 +269,9 @@ L'exemple plus grand d'avant ressemblerait maintenant à ceci :
 ##..[][]..[]..[][]##
 ##........[]......##
 ####################
+#+end_example
 Comme les boîtes sont désormais deux fois plus larges mais que le robot a toujours la même taille et la même vitesse, les boîtes peuvent être alignées de manière à pousser directement deux autres boîtes à la fois. Par exemple, considérons cette situation :
-
+#+begin_example
 #######
 #...#.#
 #.....#
@@ -274,8 +281,9 @@ Comme les boîtes sont désormais deux fois plus larges mais que le robot a touj
 #######
 
 <vv<<^^<<^^
+#+end_example
 Après avoir redimensionné cette carte de manière appropriée, le robot déplacerait ces boîtes comme suit :
-
+#+begin_example
 Initial state:
 ##############
 ##......##..##
@@ -383,13 +391,14 @@ Move ^:
 ##..........##
 ##..........##
 ##############
+#+end_example
 Cet entrepôt utilise également le GPS pour localiser les boîtes. Pour ces boîtes plus grandes, les distances sont mesurées à partir du bord de la carte jusqu'au bord le plus proche de la boîte en question. Ainsi, la boîte illustrée ci-dessous a une distance de 1du bord supérieur de la carte et 5du bord gauche de la carte, ce qui donne une coordonnée GPS de 100 * 1 + 5 = 105.
-
+#+begin_example
 ##########
 ##...[]...
 ##........
 Dans la version agrandie de l'exemple plus grand ci-dessus, une fois que le robot a terminé tous ses mouvements, l'entrepôt ressemblerait à ceci :
-
+#+begin_example
 ####################
 ##[].......[].[][]##
 ##[]...........[].##
@@ -400,6 +409,7 @@ Dans la version agrandie de l'exemple plus grand ci-dessus, une fois que le robo
 ##..@......[].[][]##
 ##......[][]..[]..##
 ####################
+#+end_example
 La somme des coordonnées GPS de ces cases est 9021.
 
 Prévoyez le mouvement du robot et des cartons dans ce nouvel entrepôt agrandi. Quelle est la somme des coordonnées GPS finales de tous les cartons ?
