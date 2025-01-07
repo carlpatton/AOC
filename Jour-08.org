@@ -1,10 +1,12 @@
 * Jour 8 : Colinéarité résonante 
+
+* Partie 1
 Vous vous retrouvez sur le toit d'une installation top secrète de lapin de Pâques.
 
 Pendant que les historiens font leur travail, vous jetez un œil à l' énorme antenne familière . À votre grande surprise, elle semble avoir été reconfigurée pour émettre un signal qui augmente de 0,1 % la probabilité que les gens achètent du chocolat médiocre d'imitation de marque Easter Bunny comme cadeau de Noël ! Impensable !
 
 En parcourant la ville du regard, vous découvrez qu'il existe en réalité de nombreuses antennes de ce type. Chaque antenne est réglée sur une fréquence spécifique indiquée par une lettre minuscule, une lettre majuscule ou un chiffre. Vous créez une carte (votre entrée de puzzle) de ces antennes. Par exemple :
-
+#+begin_example
 ............
 ........0...
 .....0......
@@ -17,10 +19,11 @@ En parcourant la ville du regard, vous découvrez qu'il existe en réalité de n
 .........A..
 ............
 ............
+#+end_example
 Le signal n'exerce son effet néfaste qu'à des antinœuds spécifiques basés sur les fréquences de résonance des antennes. En particulier, un antinœud apparaît à tout point qui est parfaitement aligné avec deux antennes de la même fréquence - mais seulement lorsque l'une des antennes est deux fois plus éloignée que l'autre. Cela signifie que pour toute paire d'antennes de même fréquence, il existe deux antinœuds, un de chaque côté d'elles.
 
 Donc, pour ces deux antennes avec fréquence a, elles créent les deux antinœuds marqués par #:
-
+#+begin_example
 ..........
 ...#......
 ..........
@@ -31,8 +34,9 @@ Donc, pour ces deux antennes avec fréquence a, elles créent les deux antinœud
 ......#...
 ..........
 ..........
+#+end_example
 L'ajout d'une troisième antenne avec la même fréquence crée plusieurs antinœuds supplémentaires. Idéalement, cela ajouterait quatre antinœuds, mais deux d'entre eux se trouvent sur le côté droit de la carte, donc à la place, cela n'en ajoute que deux :
-
+#+begin_example
 ..........
 ...#......
 #.........
@@ -43,8 +47,9 @@ L'ajout d'une troisième antenne avec la même fréquence crée plusieurs antin�
 ......#...
 ..........
 ..........
+#+end_example
 Les antennes avec des fréquences différentes ne créent pas de ventres-nœuds Aet asont considérées comme des fréquences différentes. Cependant, des ventres-nœuds peuvent apparaître à des endroits qui contiennent des antennes. Dans ce diagramme, l'antenne isolée avec une fréquence majuscule Ane crée aucun ventre-nœud mais possède un aventre-nœud de fréquence minuscule à son emplacement :
-
+#+begin_example
 ..........
 ...#......
 #.........
@@ -55,8 +60,9 @@ Les antennes avec des fréquences différentes ne créent pas de ventres-nœuds 
 ......A...
 ..........
 ..........
+#+end_example
 Le premier exemple comporte des antennes avec deux fréquences différentes, donc les antinœuds qu'ils créent ressemblent à ceci, plus un antinœud chevauchant l' Aantenne de fréquence la plus élevée :
-
+#+begin_example
 ......#....#
 ...#....0...
 ....#0....#.
@@ -69,6 +75,7 @@ Le premier exemple comporte des antennes avec deux fréquences différentes, don
 .........A..
 ..........#.
 ..........#.
+#+end_example
 Étant donné que l' Aantenne à fréquence supérieure chevauche un 0antinœud à fréquence supérieure, il existe 14un nombre total d'emplacements uniques qui contiennent un antinœud dans les limites de la carte.
 
 Calculez l'impact du signal. Combien d'emplacements uniques dans les limites de la carte contiennent un antinœud ?
@@ -77,7 +84,7 @@ Calculez l'impact du signal. Combien d'emplacements uniques dans les limites de 
 
 
 
---- Deuxième partie ---
+* Partie 2
 Tandis que vous travaillez, l'un des historiens vous regarde par-dessus votre épaule et vous demande si vous avez pris en compte les effets des harmoniques résonnantes dans vos calculs.
 
 Oups !
@@ -85,7 +92,7 @@ Oups !
 Après avoir mis à jour votre modèle, il s'avère qu'un antinœud apparaît à n'importe quelle position de la grille exactement en ligne avec au moins deux antennes de la même fréquence, quelle que soit la distance. Cela signifie que certains des nouveaux antinœuds apparaîtront à la position de chaque antenne (à moins que cette antenne ne soit la seule de sa fréquence).
 
 Ainsi, ces Tantennes à trois fréquences créent désormais de nombreux antinœuds :
-
+#+begin_example
 T....#....
 ...T......
 .T....#...
@@ -96,10 +103,11 @@ T....#....
 ..........
 ....#.....
 ..........
+#+end_example
 En fait, les Tantennes à trois fréquences sont toutes exactement alignées avec deux antennes, elles sont donc toutes aussi des antinœuds ! Cela porte le nombre total d'antinœuds dans l'exemple ci-dessus à 9.
 
 L'exemple original comporte désormais 34des antinœuds, y compris les antinœuds qui apparaissent sur chaque antenne :
-
+#+begin_example
 ##....#....#
 .#.#....0...
 ..#.#0....#.
@@ -112,6 +120,7 @@ L'exemple original comporte désormais 34des antinœuds, y compris les antinœud
 ....#....A..
 .#........#.
 ...#......##
+#+end_example
 Calculez l'impact du signal à l'aide de ce modèle mis à jour. Combien d'emplacements uniques dans les limites de la carte contiennent un antinœud ?
 
 ** Votre réponse à l'énigme était 1019.
