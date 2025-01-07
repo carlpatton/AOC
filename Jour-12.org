@@ -1,14 +1,17 @@
 * Jour 12 : Groupes de jardinage 
+
+* Partie 1
 Pourquoi ne pas chercher l'historien en chef près du jardinier et de son immense ferme ? Il y a beaucoup de nourriture, alors les historiens prennent quelque chose à manger pendant qu'ils cherchent.
 
 Vous êtes sur le point de vous installer près d'un ensemble complexe de parcelles de jardin lorsque des elfes vous demandent si vous pouvez leur donner un coup de main. Ils aimeraient installer des clôtures autour de chaque région de parcelles de jardin, mais ils ne savent pas combien de clôtures ils doivent commander ni combien cela coûtera. Ils vous remettent une carte (votre contribution au puzzle) des parcelles de jardin.
 
 Chaque parcelle de jardin ne cultive qu'un seul type de plante et est indiquée par une seule lettre sur votre carte. Lorsque plusieurs parcelles de jardin cultivent le même type de plante et se touchent (horizontalement ou verticalement), elles forment une région . Par exemple :
-
+#+begin_example
 AAAA
 BBCD
 BBCC
 EEEC
+#+end_example
 Cet aménagement 4x4 comprend des parcelles de jardin où poussent cinq types de plantes différents (étiquetés A, B, C, Det E), chacun regroupé dans sa propre région.
 
 Afin de calculer avec précision le coût de la clôture autour d'une seule région, vous devez connaître la superficie et le périmètre de cette région .
@@ -18,7 +21,7 @@ La superficie d'une région correspond simplement au nombre de parcelles de jard
 Chaque parcelle de jardin est un carré et possède donc quatre côtés . Le périmètre d'une région est le nombre de côtés des parcelles de jardin de la région qui ne touchent pas une autre parcelle de jardin de la même région. Le type Aet Cles plantes sont chacun dans une région avec un périmètre 10. Le type Bet Eles plantes sont chacun dans une région avec un périmètre 8. La Dparcelle isolée forme sa propre région avec un périmètre 4.
 
 En indiquant visuellement les côtés des parcelles de chaque région qui contribuent au périmètre à l'aide de -et |, les périmètres des régions de la carte ci-dessus sont mesurés comme suit :
-
+#+begin_example
 +-+-+-+-+
 |A A A A|
 +-+-+-+-+     +-+
@@ -32,13 +35,15 @@ En indiquant visuellement les côtés des parcelles de chaque région qui contri
 +-+-+-+   +-+
 |E E E|
 +-+-+-+
+#+end_example
 Des plantes du même type peuvent apparaître dans plusieurs régions distinctes, et des régions peuvent même apparaître dans d'autres régions. Par exemple :
-
+#+begin_example
 OOOOO
 OXOXO
 OOOOO
 OXOXO
 OOOOO
+#+end_example
 La carte ci-dessus contient cinq régions, l'une contenant toutes les Oparcelles de jardin et les quatre autres contenant chacune une seule Xparcelle.
 
 Les quatre Xrégions ont chacune une superficie 1et un périmètre de 4. La région contenant les plantes 21de type Oest plus compliquée ; en plus de son bord extérieur contribuant à un périmètre de 20, sa frontière avec chaque Xrégion contribue 4à un périmètre supplémentaire, pour un périmètre total de 36.
@@ -50,7 +55,7 @@ Dans le premier exemple, region Aa price 4 * 10 = 40, region Ba price 4 * 8 = 32
 Dans le deuxième exemple, la région avec toutes les Oplantes a un prix 21 * 36 = 756, et chacune des quatre Xrégions plus petites a un prix 1 * 4 = 4, pour un prix total de 772( 756 + 4 + 4 + 4 + 4).
 
 Voici un exemple plus grand :
-
+#+begin_example
 RRRRIICCFF
 RRRRIICCCF
 VVRRRCCFFF
@@ -61,8 +66,9 @@ VVIIICJJEE
 MIIIIIJJEE
 MIIISIJEEE
 MMMISSJEEE
+#+end_example
 Il contient :
-
+#+begin_example
 Une région de Rplantes à prix 12 * 18 = 216.
 Une région de Iplantes à prix 4 * 8 = 32.
 Une région de Cplantes à prix 14 * 28 = 392.
@@ -75,25 +81,26 @@ Une région de Iplantes à prix 14 * 22 = 308.
 Une région de Mplantes à prix 5 * 12 = 60.
 Une région de Splantes à prix 3 * 8 = 24.
 Donc, son prix total est de 1930.
+#+end_example
 
 Quel est le prix total de la clôture de toutes les régions de votre carte ?
 
 ** Votre réponse à l'énigme était 1371306.
 
 
+* Partie 2
 
-
---- Deuxième partie ---
 Heureusement, les elfes essaient de commander tellement de clôtures qu'ils ont droit à une remise en gros !
 
 Dans le cadre de la remise sur le prix de gros, au lieu d'utiliser le périmètre pour calculer le prix, vous devez utiliser le nombre de côtés de chaque région. Chaque section droite de clôture compte comme un côté, quelle que soit sa longueur.
 
 Considérez à nouveau cet exemple :
-
+#+begin_example
 AAAA
 BBCD
 BBCC
 EEEC
+#+end_example
 La région contenant Ales plantes de type a 4des côtés, comme chacune des régions contenant les plantes de type B, Det E. Cependant, la région plus complexe contenant les plantes de type Ca 8des côtés !
 
 En utilisant la nouvelle méthode de calcul du prix par région en multipliant la superficie de la région par son nombre de côtés, les régions Aà Eont respectivement des prix 16, 16, 32, 4et 12, pour un prix total de 80.
@@ -101,26 +108,28 @@ En utilisant la nouvelle méthode de calcul du prix par région en multipliant l
 Le deuxième exemple ci-dessus (plein de typographie Xet Ode plantes) aurait un prix total de 436.
 
 Voici une carte qui comprend une région en forme de E pleine de Eplantes types :
-
+#+begin_example
 EEEEE
 EXXXX
 EEEEE
 EXXXX
 EEEEE
+#+end_example
 La région en forme de E a une superficie de 17et 12des côtés pour un prix de 204. En incluant les deux régions remplies de Xplantes de type, cette carte a un prix total de 236.
 
 Cette carte a un prix total de 368:
-
+#+begin_example
 AAAAAA
 AAABBA
 AAABBA
 ABBAAA
 ABBAAA
 AAAAAA
+#+end_example
 Elle comprend deux régions pleines de Bplantes typographiques (chacune avec 4des côtés) et une seule région pleine de Aplantes typographiques (avec 4des côtés à l'extérieur et 8plus de côtés à l'intérieur, soit un total de 12côtés). Soyez particulièrement prudent lorsque vous comptez la clôture autour des régions comme celle pleine de Aplantes typographiques ; en particulier, chaque section de clôture a un côté intérieur et un côté extérieur, de sorte que la clôture ne se connecte pas au milieu de la région (là où les deux Brégions se touchent en diagonale). (Les elfes auraient plutôt utilisé la société de clôtures Möbius, mais leurs termes contractuels étaient trop unilatéraux.)
 
 L'exemple le plus grand d'avant a maintenant les prix mis à jour suivants :
-
+#+begin_example
 Une région de Rplantes à prix 12 * 10 = 120.
 Une région de Iplantes à prix 4 * 4 = 16.
 Une région de Cplantes à prix 14 * 22 = 308.
@@ -132,6 +141,7 @@ Une région de Eplantes à prix 13 * 8 = 104.
 Une région de Iplantes à prix 14 * 16 = 224.
 Une région de Mplantes à prix 5 * 6 = 30.
 Une région de Splantes à prix 3 * 6 = 18.
+#+end_example
 En additionnant ces éléments, on obtient un nouveau prix total de 1206.
 
 Quel est le nouveau prix total pour clôturer toutes les régions de votre carte ?
