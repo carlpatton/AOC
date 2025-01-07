@@ -1,4 +1,4 @@
---- Jour 1 : L'hystérie de l'historien ---
+* Jour 1 : L'hystérie de l'historien 
 L' historien en chef est toujours présent pour le grand lancement du traîneau de Noël, mais personne ne l'a vu depuis des mois ! La dernière fois que quelqu'un a entendu parler de lui, il visitait des lieux historiquement importants pour le pôle Nord ; un groupe d'historiens en chef vous a demandé de les accompagner pendant qu'ils vérifient les endroits qu'ils pensent qu'il était le plus susceptible de visiter.
 
 Au fur et à mesure que chaque endroit est vérifié, ils le marqueront sur leur liste avec une étoile . Ils pensent que l'historien en chef doit être dans l'un des cinquante premiers endroits qu'ils chercheront, donc pour sauver Noël, vous devez les aider à obtenir cinquante étoiles sur leur liste avant le départ du Père Noël le 25 décembre.
@@ -37,7 +37,7 @@ Pour trouver la distance totale entre la liste de gauche et la liste de droite, 
 
 Vos listes de gauche et de droite contiennent de nombreux identifiants d'emplacement. Quelle est la distance totale entre vos listes ?
 
-Votre réponse à l'énigme était 2580760.
+** Votre réponse à l'énigme était 2580760.
 
 
 
@@ -70,6 +70,6 @@ Ainsi, pour ces listes d’exemples, le score de similarité à la fin de ce pro
 
 Considérez à nouveau vos listes de gauche et de droite. Quel est leur score de similarité ?
 
-Votre réponse à l'énigme était 25358365.
+** Votre réponse à l'énigme était 25358365.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
