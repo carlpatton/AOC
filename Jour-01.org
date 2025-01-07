@@ -14,13 +14,14 @@ Dans tout le bureau du chef, les lieux d'importance historique ne sont pas répe
 Il y a juste un problème : en tenant les deux listes côte à côte (votre entrée de puzzle), il devient rapidement évident que les listes ne sont pas très similaires. Peut-être pouvez-vous aider les historiens à réconcilier leurs listes ?
 
 Par exemple:
-
+#+begin_example
 3   4
 4   3
 2   5
 1   3
 3   9
 3   3
+#+end_example
 Peut-être que les listes ne sont erronées que d'un petit nombre ! Pour le savoir, associez les nombres et mesurez leur écart. Associez le plus petit nombre de la liste de gauche avec le plus petit nombre de la liste de droite , puis le deuxième plus petit nombre de gauche avec le deuxième plus petit nombre de droite , et ainsi de suite.
 
 Dans chaque paire, déterminez la distance qui sépare les deux nombres ; vous devrez additionner toutes ces distances . Par exemple, si vous associez un 3de la liste de gauche avec un 7de la liste de droite, la distance qui les sépare est 4; si vous associez un 9avec un 3, la distance qui les sépare est 6.
@@ -51,13 +52,14 @@ Les historiens ne parviennent pas à se mettre d'accord sur le groupe qui a comm
 Cette fois, vous devrez déterminer exactement à quelle fréquence chaque numéro de la liste de gauche apparaît dans la liste de droite. Calculez un score de similarité total en additionnant chaque numéro de la liste de gauche après l'avoir multiplié par le nombre de fois que ce numéro apparaît dans la liste de droite.
 
 Voici à nouveau les mêmes exemples de listes :
-
+#+begin_example
 3   4
 4   3
 2   5
 1   3
 3   9
 3   3
+#+end_example
 Pour ces exemples de listes, voici le processus de recherche du score de similarité :
 
 Le premier nombre de la liste de gauche est 3. Il apparaît trois fois dans la liste de droite, donc le score de similarité augmente de .3 * 3 = 9
