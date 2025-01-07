@@ -397,6 +397,7 @@ Cet entrepôt utilise également le GPS pour localiser les boîtes. Pour ces bo�
 ##########
 ##...[]...
 ##........
+#+end_example
 Dans la version agrandie de l'exemple plus grand ci-dessus, une fois que le robot a terminé tous ses mouvements, l'entrepôt ressemblerait à ceci :
 #+begin_example
 ####################
