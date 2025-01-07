@@ -1,4 +1,6 @@
 * Jour 5 : File d'attente d'impression 
+
+* Partie 1
 Satisfait de ses recherches sur Cérès, l'escadron de savants propose de parcourir ensuite les piles de papeterie du sous-sol 17.
 
 Le département d'impression du pôle Nord est plus occupé que jamais à l'approche de Noël, et tandis que les historiens continuent leurs recherches dans cette installation d'importance historique, un elfe qui exploite une imprimante très familière vous fait signe.
@@ -10,7 +12,7 @@ Les protocoles de sécurité indiquent clairement que les nouvelles pages des ma
 L'elfe a pour vous à la fois les règles d'ordre des pages et les pages à produire à chaque mise à jour (votre entrée de puzzle), mais ne peut pas déterminer si chaque mise à jour a les pages dans le bon ordre.
 
 Par exemple:
-
+#+begin_example
 47|53
 97|13
 97|61
@@ -39,6 +41,7 @@ Par exemple:
 75,97,47,61,53
 61,13,29
 97,13,75,29,47
+#+end_example
 La première section spécifie les règles d'ordre des pages , une par ligne. La première règle, 47|53, signifie que si une mise à jour inclut à la fois la page numéro 47 et la page numéro 53, alors la page numéro 47 doit être imprimée à un moment donné avant la page numéro 53. (47 ne doit pas nécessairement être immédiatement avant la page 53 ; d'autres pages peuvent être entre elles.)
 
 La deuxième section précise les numéros de page de chaque mise à jour . Étant donné que la plupart des manuels de sécurité sont différents, les pages nécessaires aux mises à jour sont également différentes. La première mise à jour, 75,47,61,53,29, signifie que la mise à jour comprend les numéros de page 75, 47, 61, 53 et 29.
@@ -63,10 +66,11 @@ La cinquième mise à jour, 61,13,29, n'est pas non plus dans le bon ordre, car 
 La dernière mise à jour, 97,13,75,29,47, n'est pas dans le bon ordre en raison de la violation de plusieurs règles.
 
 Pour une raison inconnue, les elfes ont également besoin de connaître le numéro de la page centrale de chaque mise à jour imprimée. Étant donné que vous n'imprimez actuellement que les mises à jour correctement ordonnées, vous devrez trouver le numéro de la page centrale de chaque mise à jour correctement ordonnée. Dans l'exemple ci-dessus, les mises à jour correctement ordonnées sont :
-
+#+begin_example
 75,47,61,53,29
 97,61,53,29,13
 75,29,13
+#+end_example
 Les numéros de page intermédiaires sont respectivement 61, 53et 29. L'addition de ces numéros de page donne 143.
 
 Bien sûr, vous devrez être prudent : la liste réelle des règles d'ordre des pages est plus longue et plus compliquée que l'exemple ci-dessus.
@@ -77,14 +81,15 @@ Déterminez quelles mises à jour sont déjà dans le bon ordre. Qu'obtenez-vous
 
 
 
---- Deuxième partie ---
+* Partie 2
 Pendant que les elfes se mettent au travail pour imprimer les mises à jour correctement ordonnées, vous avez un peu de temps pour réparer le reste.
 
 Pour chacune des mises à jour mal ordonnées , utilisez les règles de classement des pages pour placer les numéros de page dans le bon ordre. Pour l'exemple ci-dessus, voici les trois mises à jour mal ordonnées et leur classement correct :
-
+#+begin_example
 75,97,47,61,53devient .97,75,47,61,53
 61,13,29devient .61,29,13
 97,13,75,29,47devient .97,75,47,29,13
+#+end_example
 Après avoir pris uniquement les mises à jour mal ordonnées et les avoir ordonnées correctement, leurs numéros de page du milieu sont 47, 29et 47. En les additionnant, on obtient 123.
 
 Recherchez les mises à jour qui ne sont pas dans le bon ordre. Qu'obtenez-vous si vous additionnez les numéros de page du milieu après avoir ordonné correctement uniquement ces mises à jour ?
