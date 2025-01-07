@@ -1,4 +1,6 @@
 * Jour 2 : Rapports au nez rouge
+
+* Partie 1
 Heureusement, le premier endroit que les historiens veulent rechercher n'est pas à une longue distance à pied du bureau de l'historien en chef.
 
 Bien que l' usine de fusion/fission nucléaire du Renne au nez rouge ne semble contenir aucun signe de l'historien en chef, les ingénieurs qui s'y trouvent courent vers vous dès qu'ils vous voient. Apparemment, ils parlent encore de l'époque où Rudolph a été sauvé par synthèse moléculaire à partir d'un seul électron.
@@ -6,13 +8,14 @@ Bien que l' usine de fusion/fission nucléaire du Renne au nez rouge ne semble c
 Ils s'empressent d'ajouter que, puisque vous êtes déjà là, ils apprécieraient vraiment votre aide pour analyser certaines données inhabituelles du réacteur au nez rouge. Vous vous retournez pour vérifier si les historiens vous attendent, mais ils semblent déjà s'être divisés en groupes qui fouillent actuellement tous les recoins de l'installation. Vous proposez de les aider à analyser les données inhabituelles.
 
 Les données inhabituelles (votre entrée de puzzle) se composent de plusieurs rapports , un rapport par ligne. Chaque rapport est une liste de nombres appelés niveaux , séparés par des espaces. Par exemple :
-
+#+begin_example
 7 6 4 2 1
 1 2 7 8 9
 9 7 6 2 1
 1 3 2 4 5
 8 6 4 4 1
 1 3 6 7 9
+#+end_example
 Cet exemple de données contient six rapports contenant chacun cinq niveaux.
 
 Les ingénieurs tentent de déterminer quels rapports sont sûrs . Les systèmes de sécurité du réacteur Red-Nosed ne peuvent tolérer que des niveaux qui augmentent ou diminuent progressivement. Ainsi, un rapport n'est considéré comme sûr que si les deux conditions suivantes sont remplies :
@@ -20,7 +23,7 @@ Les ingénieurs tentent de déterminer quels rapports sont sûrs . Les systèmes
 Les niveaux sont soit tous en augmentation , soit tous en diminution .
 Deux niveaux adjacents diffèrent d' au moins un et d'au plus trois .
 Dans l'exemple ci-dessus, les rapports peuvent être jugés sûrs ou non sûrs en vérifiant ces règles :
-
+#+begin_example
 7 6 4 2 1: Sûr car les niveaux diminuent tous de 1 ou 2.
 1 2 7 8 9: Dangereux car 2 7il s'agit d'une augmentation de 5.
 9 7 6 2 1: Dangereux car 6 2il s'agit d'une diminution de 4.
@@ -28,6 +31,7 @@ Dans l'exemple ci-dessus, les rapports peuvent être jugés sûrs ou non sûrs e
 8 6 4 4 1: Dangereux car 4 4il ne s’agit ni d’une augmentation ni d’une diminution.
 1 3 6 7 9: Sûr car les niveaux augmentent tous de 1, 2 ou 3.
 Donc, dans cet exemple, 2les rapports sont sécurisés .
+#+end_example
 
 Analysez les données inhabituelles fournies par les ingénieurs. Combien de rapports sont sûrs ?
 
@@ -35,7 +39,7 @@ Analysez les données inhabituelles fournies par les ingénieurs. Combien de rap
 
 
 
---- Deuxième partie ---
+* Partie 2
 Les ingénieurs sont surpris par le faible nombre de rapports de sécurité jusqu'à ce qu'ils réalisent qu'ils ont oublié de vous parler de l' amortisseur de problèmes .
 
 Le Problem Dampener est un module monté sur le réacteur qui permet aux systèmes de sécurité du réacteur de tolérer un seul niveau défectueux dans ce qui serait autrement un rapport sûr. C'est comme si le niveau défectueux n'était jamais arrivé !
@@ -43,13 +47,14 @@ Le Problem Dampener est un module monté sur le réacteur qui permet aux systèm
 Désormais, les mêmes règles s'appliquent qu'avant, sauf que si la suppression d'un seul niveau d'un rapport non sécurisé le rendrait sûr, le rapport est alors considéré comme sûr.
 
 D'autres rapports de l'exemple ci-dessus sont désormais sécurisés :
-
+#+begin_example
 7 6 4 2 1: Sécuritaire sans supprimer aucun niveau.
 1 2 7 8 9: Dangereux quel que soit le niveau supprimé.
 9 7 6 2 1: Dangereux quel que soit le niveau supprimé.
 1 3 2 4 5: Sécurisé en supprimant le deuxième niveau, 3.
 8 6 4 4 1: Sécurisé en supprimant le troisième niveau, 4.
 1 3 6 7 9: Sécuritaire sans supprimer aucun niveau.
+#+end_example
 Grâce au Problem Dampener, 4les rapports sont réellement sécurisés !
 
 Mettez à jour votre analyse en gérant les situations dans lesquelles l'amortisseur de problèmes peut supprimer un seul niveau des rapports non sécurisés. Combien de rapports sont désormais sécurisés ?
