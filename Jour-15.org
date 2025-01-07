@@ -1,4 +1,4 @@
---- Jour 15 : Les malheurs de l'entrepôt ---
+* Jour 15 : Les malheurs de l'entrepôt 
 Vous réapparaissez dans votre propre mini sous-marin ! Chaque historien conduit son mini sous-marin dans une direction différente ; peut-être que le chef a aussi son propre sous-marin ici quelque part ?
 
 Vous levez les yeux et voyez un vaste banc de poissons-lanternes nager à côté de vous. En les regardant de plus près, ils semblent assez anxieux, alors vous conduisez votre mini-sous-marin pour voir si vous pouvez les aider.
@@ -234,7 +234,9 @@ Le poisson-lanterne voudrait connaître la somme des coordonnées GPS de toutes 
 
 Prévoyez le mouvement du robot et des cartons dans l'entrepôt. Une fois que le robot a fini de se déplacer, quelle est la somme des coordonnées GPS de tous les cartons ?
 
-Votre réponse à l'énigme était 1509863.
+** Votre réponse à l'énigme était 1509863.
+
+
 
 --- Deuxième partie ---
 Les poissons-lanternes utilisent vos informations pour trouver un moment sûr pour nager et éteindre le robot défectueux ! Au moment où ils commencent à préparer un festival en votre honneur, des rapports commencent à arriver indiquant que le robot d'un deuxième entrepôt fonctionne également mal.
@@ -402,6 +404,6 @@ La somme des coordonnées GPS de ces cases est 9021.
 
 Prévoyez le mouvement du robot et des cartons dans ce nouvel entrepôt agrandi. Quelle est la somme des coordonnées GPS finales de tous les cartons ?
 
-Votre réponse à l'énigme était 1548815.
+** Votre réponse à l'énigme était 1548815.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
