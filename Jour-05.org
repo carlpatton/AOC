@@ -1,4 +1,4 @@
---- Jour 5 : File d'attente d'impression ---
+* Jour 5 : File d'attente d'impression 
 Satisfait de ses recherches sur Cérès, l'escadron de savants propose de parcourir ensuite les piles de papeterie du sous-sol 17.
 
 Le département d'impression du pôle Nord est plus occupé que jamais à l'approche de Noël, et tandis que les historiens continuent leurs recherches dans cette installation d'importance historique, un elfe qui exploite une imprimante très familière vous fait signe.
@@ -73,7 +73,7 @@ Bien sûr, vous devrez être prudent : la liste réelle des règles d'ordre des 
 
 Déterminez quelles mises à jour sont déjà dans le bon ordre. Qu'obtenez-vous si vous additionnez les numéros de page du milieu de ces mises à jour correctement ordonnées ?
 
-Votre réponse à l'énigme était 4185.
+** Votre réponse à l'énigme était 4185.
 
 
 
@@ -89,6 +89,6 @@ Après avoir pris uniquement les mises à jour mal ordonnées et les avoir ordon
 
 Recherchez les mises à jour qui ne sont pas dans le bon ordre. Qu'obtenez-vous si vous additionnez les numéros de page du milieu après avoir ordonné correctement uniquement ces mises à jour ?
 
-Votre réponse à l'énigme était 4480.
+** Votre réponse à l'énigme était 4480.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
