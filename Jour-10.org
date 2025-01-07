@@ -1,4 +1,4 @@
---- Jour 10 : Hoof It ---
+* Jour 10 : Hoof It 
 Vous arrivez tous à une usine de production de lave sur une île flottante dans le ciel. Alors que les autres commencent à fouiller l'immense complexe industriel, vous sentez un petit nez vous frapper la jambe et baissez les yeux pour découvrir un renne portant un casque de sécurité.
 
 Le renne tient un livre intitulé « Guide de randonnée de l'île de lave ». Cependant, lorsque vous ouvrez le livre, vous découvrez que la majeure partie de celui-ci semble avoir été brûlée par la lave ! Alors que vous êtes sur le point de demander comment vous pouvez aider, le renne vous apporte une carte topographique vierge des environs (votre contribution au puzzle) et vous regarde avec enthousiasme.
@@ -60,7 +60,7 @@ Cet exemple plus grand comporte 9 points de départ. En considérant les points 
 
 Le renne porte joyeusement un rapporteur et l'ajoute à la pile. Quelle est la somme des scores de tous les points de départ des sentiers sur votre carte topographique ?
 
-Votre réponse à l'énigme était 587.
+** Votre réponse à l'énigme était 587.
 
 
 
@@ -116,6 +116,6 @@ En considérant les points de départ des sentiers dans l'ordre de lecture, ils 
 
 Vous ne savez pas comment, mais le renne semble avoir fabriqué de minuscules drapeaux à partir de cure-dents et de morceaux de papier et les utilise pour marquer les points de départ des sentiers sur votre carte topographique. Quelle est la somme des notes de tous les points de départ des sentiers ?
 
-Votre réponse à l'énigme était 1340.
+** Votre réponse à l'énigme était 1340.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
