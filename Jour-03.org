@@ -1,4 +1,4 @@
---- Jour 3 : Réfléchissons-y ---
+* Jour 3 : Réfléchissons-y
 « Nos ordinateurs ont des problèmes, donc je ne sais pas si nous avons des historiens en chef en stock ! Vous pouvez cependant vérifier l'entrepôt », dit le commerçant légèrement énervé du magasin de location de toboggans du pôle Nord . Les historiens se dirigent vers l'entrepôt pour y jeter un œil.
 
 Le commerçant se tourne vers vous. « Est-ce que vous comprenez pourquoi nos ordinateurs ont encore des problèmes ? »
@@ -16,7 +16,7 @@ Seules les quatre sections mises en surbrillance sont de véritables mulinstruct
 
 Analysez la mémoire corrompue à la recherche muld'instructions non corrompues. Qu'obtenez-vous si vous additionnez tous les résultats des multiplications ?
 
-Votre réponse à l'énigme était 173731097.
+** Votre réponse à l'énigme était 173731097.
 
 
 
@@ -38,6 +38,6 @@ Cette fois, la somme des résultats est 48( 2*4 + 8*5).
 
 Gérez les nouvelles instructions ; qu'obtenez-vous si vous additionnez tous les résultats des multiplications activées ?
 
-Votre réponse à l'énigme était 93729253.
+** Votre réponse à l'énigme était 93729253.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
