@@ -1,4 +1,4 @@
---- Jour 2 : Rapports au nez rouge ---
+* Jour 2 : Rapports au nez rouge
 Heureusement, le premier endroit que les historiens veulent rechercher n'est pas à une longue distance à pied du bureau de l'historien en chef.
 
 Bien que l' usine de fusion/fission nucléaire du Renne au nez rouge ne semble contenir aucun signe de l'historien en chef, les ingénieurs qui s'y trouvent courent vers vous dès qu'ils vous voient. Apparemment, ils parlent encore de l'époque où Rudolph a été sauvé par synthèse moléculaire à partir d'un seul électron.
@@ -31,7 +31,7 @@ Donc, dans cet exemple, 2les rapports sont sécurisés .
 
 Analysez les données inhabituelles fournies par les ingénieurs. Combien de rapports sont sûrs ?
 
-Votre réponse à l'énigme était 224.
+** Votre réponse à l'énigme était 224.
 
 
 
@@ -54,6 +54,6 @@ Grâce au Problem Dampener, 4les rapports sont réellement sécurisés !
 
 Mettez à jour votre analyse en gérant les situations dans lesquelles l'amortisseur de problèmes peut supprimer un seul niveau des rapports non sécurisés. Combien de rapports sont désormais sécurisés ?
 
-Votre réponse à l'énigme était 293.
+* Votre réponse à l'énigme était 293.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
