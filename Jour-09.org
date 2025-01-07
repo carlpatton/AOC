@@ -1,4 +1,4 @@
---- Jour 9 : Fragmenteur de disque ---
+* Jour 9 : Fragmenteur de disque 
 Une autre pression sur le bouton vous laisse dans les couloirs familiers de quelques amphipodes amicaux ! Heureusement que vous avez chacun votre propre mini sous-marin personnel. Les Historiens s'envolent à la recherche du Chef, la plupart du temps en fonçant directement dans les murs.
 
 Alors que les historiens découvrent rapidement comment piloter ces choses, vous remarquez un amphipode dans un coin qui a du mal avec son ordinateur. Il essaie de libérer plus d'espace libre en compactant tous les fichiers, mais son programme ne fonctionne pas ; vous lui proposez de l'aider.
@@ -45,7 +45,7 @@ Poursuivant le premier exemple, la position des premiers blocs multipliée par s
 
 Compactez le disque dur de l'amphipode en utilisant le processus demandé. Quelle est la somme de contrôle du système de fichiers obtenue ? (Faites attention en copiant/collant l'entrée pour ce puzzle ; il s'agit d'une seule ligne très longue.)
 
-Votre réponse à l'énigme était 6435922584968.
+** Votre réponse à l'énigme était 6435922584968.
 
 --- Deuxième partie ---
 Une fois l'opération terminée, deux choses deviennent immédiatement évidentes. Tout d'abord, le disque dispose certainement de beaucoup plus d'espace libre contigu, comme l'espérait l'amphipode. Deuxièmement, l'ordinateur fonctionne beaucoup plus lentement ! Peut-être que l'introduction de toute cette fragmentation du système de fichiers était une mauvaise idée ?
@@ -65,6 +65,6 @@ Le processus de mise à jour de la somme de contrôle du système de fichiers es
 
 Recommencez, en compactant maintenant le disque dur de l'amphipode en utilisant cette nouvelle méthode. Quelle est la somme de contrôle du système de fichiers résultante ?
 
-Votre réponse à l'énigme était 6469636832766.
+** Votre réponse à l'énigme était 6469636832766.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
