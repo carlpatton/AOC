@@ -1,4 +1,4 @@
---- Jour 13 : L'engin à griffes ---
+* Jour 13 : L'engin à griffes 
 Ensuite, le hall d'un complexe hôtelier sur une île tropicale. Les historiens prennent un moment pour admirer le carrelage hexagonal du sol avant de se disperser.
 
 Heureusement, il semblerait que la station dispose d'une nouvelle salle d'arcade ! Peut-être pourrez-vous gagner des prix grâce aux machines à pinces ?
@@ -45,7 +45,7 @@ Vous estimez qu'il ne faudrait pas appuyer plus de 100fois sur chaque bouton pou
 
 Déterminez comment gagner autant de prix que possible. Quel est le nombre minimum de jetons que vous devez dépenser pour gagner tous les prix possibles ?
 
-Votre réponse à l'énigme était 33921.
+** Votre réponse à l'énigme était 33921.
 
 
 
@@ -74,6 +74,6 @@ Désormais, il n'est possible de gagner un prix que sur les machines à 2 et 4 g
 
 En utilisant les coordonnées de prix corrigées, déterminez comment gagner autant de prix que possible. Quel est le nombre minimum de jetons que vous devriez dépenser pour gagner tous les prix possibles ?
 
-Votre réponse à l'énigme était 82261957837868.
+** Votre réponse à l'énigme était 82261957837868.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
