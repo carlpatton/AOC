@@ -1,4 +1,4 @@
---- Jour 6 : Garde Gallivant ---
+* Jour 6 : Garde Gallivant 
 Les historiens utilisent à nouveau leur appareil sophistiqué , cette fois pour vous emmener tous au laboratoire de fabrication du prototype de combinaison du pôle Nord... en l'an 1518 ! Il s'avère qu'avoir un accès direct à l'histoire est très pratique pour un groupe d'historiens.
 
 Il faudra néanmoins faire attention aux paradoxes temporels, et il sera donc important d'éviter toute personne de 1518 pendant que les historiens recherchent le chef. Malheureusement, un seul garde patrouille dans cette partie du laboratoire.
@@ -87,7 +87,7 @@ Dans cet exemple, le garde visitera 41des positions distinctes sur votre carte.
 
 Prévoyez le chemin du garde. Combien de positions distinctes le garde visitera-t-il avant de quitter la zone cartographiée ?
 
-Votre réponse à l'énigme était 5305.
+** Votre réponse à l'énigme était 5305.
 
 
 
@@ -180,6 +180,6 @@ Peu importe ce que vous choisissez d'utiliser comme obstacle tant que vous et le
 
 Vous devez bloquer la garde dans une boucle en ajoutant une seule nouvelle obstruction. Combien de positions différentes pourriez-vous choisir pour cette obstruction ?
 
-Votre réponse à l'énigme était 2143.
+** Votre réponse à l'énigme était 2143.
 
 Les deux parties de ce puzzle sont complètes ! Elles fournissent deux étoiles d'or : **
