@@ -6,102 +6,107 @@ def get_data():
         data = file.read().strip()
     return data
 
-def part1():
-    disk_map = get_data()
-    disk_segments = []
-
-    for i in range(0, len(disk_map), 2):
-        file_length = int(disk_map[i])
-        free_length = int(disk_map[i + 1]) if i + 1 < len(disk_map) else 0
-        disk_segments.append(("file", file_length))
-        if free_length > 0:
-            disk_segments.append(("free", free_length))
-
-    # Build disk representation
+def make_filesystem_part1(data):
     blocks = []
-    file_id = 0
-    for segment, length in disk_segments:
-        if segment == "file":
-            blocks.extend([file_id] * length)
-            file_id += 1
+    is_file = True
+    id_elt = 0
+    for x in data:
+        x = int(x)
+        if is_file:
+            blocks += [id_elt] * x
+            id_elt += 1
+            is_file = False
         else:
-            blocks.extend(["."] * length)
+            blocks += [None] * x
+            is_file = True
 
-    # Compact the disk
-    left_walker, right_walker = 0, len(blocks) - 1
-    while left_walker < right_walker:
-        while left_walker < len(blocks) and blocks[left_walker] != ".":
-            left_walker += 1
-        while right_walker >= 0 and blocks[right_walker] == ".":
-            right_walker -= 1
-        if left_walker < right_walker:
-            blocks[left_walker], blocks[right_walker] = blocks[right_walker], blocks[left_walker]
+    return blocks
 
+def move_part1(array):
+    first_free = 0
+    while array[first_free] != None:
+        first_free += 1
+
+    i = len(array) - 1
+    while array[i] == None:
+        i -= 1
+
+    while i > first_free:
+        array[first_free] = array[i]
+        array[i] = None
+        while array[i] == None:
+            i -= 1
+        while array[first_free] != None:
+            first_free += 1
+
+    return array
+
+def part1():
+    filesystem = make_filesystem_part1(get_data())
+    new_array = move_part1(filesystem)
     checksum = 0
-    for i in range(len(blocks)):
-        if blocks[i] != ".":
-            checksum += i * blocks[i]
-
+    for i, x in enumerate(new_array):
+        if x != None:
+            checksum += i * x
     return checksum
 
+def make_filesystem_part2(line):
+    global loc, size
+    size = [0] * len(line)
+    loc = [0] * len(line)
+
+    blocks = []
+    is_file = True
+    id = 0
+    for x in line:
+        x = int(x)
+        if is_file:
+            loc[id] = len(blocks)
+            size[id] = x
+            blocks += [id] * x
+            id += 1
+            is_file = False
+        else:
+            blocks += [None] * x
+            is_file = True
+
+    return blocks
+
+def move_part2(array):
+    # Current file to move
+    big = 0
+    while size[big] > 0:
+        big += 1
+    big -= 1
+
+    for to_move in range(big, -1, -1):
+        # Find first free space that works
+        free_space = 0
+        first_free = 0
+        while first_free < loc[to_move] and free_space < size[to_move]:
+            first_free = first_free + free_space
+            free_space = 0
+            while array[first_free] != None:
+                first_free += 1
+            while first_free + free_space < len(array) and array[first_free + free_space] == None:
+                free_space += 1
+
+        if first_free >= loc[to_move]:
+            continue
+
+        # Move file by swapping block values
+        for idx in range(first_free, first_free + size[to_move]):
+            array[idx] = to_move
+        for idx in range(loc[to_move], loc[to_move] + size[to_move]):
+            array[idx] = None
+
+    return array
 
 def part2():
-    disk_map = get_data()
-    disk_segments = []
-
-    for i in range(0, len(disk_map), 2):
-        file_length = int(disk_map[i])
-        free_length = int(disk_map[i + 1]) if i + 1 < len(disk_map) else 0
-        disk_segments.append(("file", file_length))
-        if free_length > 0:
-            disk_segments.append(("free", free_length))
-
-    # Build disk representation
-    blocks = []
-    file_positions = [] # Metadata for each file: its start position, length, and ID
-    file_id = 0
-    pos = 0
-    for segment, length in disk_segments:
-        if segment == "file":
-            blocks.extend([file_id] * length)
-            file_positions.append((pos, length, file_id))
-            pos += length
-            file_id += 1
-        else:
-            blocks.extend([None] * length)
-            pos += length
-
-    # Aggregate free spaces into list of tuples
-    free_spaces = []
-    current_pos = 0
-    while current_pos < len(blocks):
-        if blocks[current_pos] is None:
-            start = current_pos
-            while current_pos < len(blocks) and blocks[current_pos] is None:
-                current_pos += 1
-            free_spaces.append((start, current_pos - start))
-        current_pos += 1
-
-    # Move files to the leftmost valid space
-    file_count = len(file_positions)
-    space_count = len(free_spaces)
-    for file_index in range((file_count - 1), -1, -1):  # Iterate through file_positions in reverse order
-        start_pos, file_size, file_id = file_positions[file_index]
-        for space_index in range(space_count):  # Iterate through free_spaces normally
-            space_pos, space_size = free_spaces[space_index]
-            if space_pos < start_pos and file_size <= space_size:
-                # Move the file
-                for j in range(file_size):
-                    blocks[start_pos + j] = None
-                    blocks[space_pos + j] = file_id
-                    # Update free space
-                free_spaces[space_index] = (space_pos + file_size, space_size - file_size)
-                break
-
-    # Calculate checksum
+    filesystem = make_filesystem_part2(get_data())
+    new_array = move_part2(filesystem)
     checksum = 0
-    for i, block in enumerate(blocks):
-        if block is not None:
-            checksum += i * block
-
+    for i, x in enumerate(new_array):
+        if x != None:
+            checksum += i * x
     return checksum
